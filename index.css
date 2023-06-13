@@ -1,0 +1,134 @@
+#navdiv{
+  display:flex;
+  width: 8%;
+  margin-left:70%;
+  justify-content: space-around;
+  margin-top: 1%;
+  height: 10%;
+  width: 30%;
+}
+nav img{
+  margin-top: 5px;
+}
+#googleimg{
+  margin-top: 100px;
+}
+a{
+  margin-top: 8px;
+  text-decoration: none;
+}
+button{
+  border-radius: 3px;
+  height:100%;
+  padding:5px 12px;
+  background-color:blue ;
+  color:white;
+  border:1px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+}
+#maindiv{
+  position:relative;
+width:39%;
+border-radius: 40px;
+display: flex;
+height:40px;
+border:2px solid black;
+}
+#inputspan{
+  width:100%;
+}
+span{
+  vertical-align:bottom;
+  
+  
+}
+span:first-child{
+  width:10%;
+  border-radius: 50px;
+  margin-top: 12px;
+  border: 1;
+}
+span:last-child{
+  width:10%;
+  border-radius: 50px;
+  margin-top: 12px;
+  border: 1;
+}
+input{
+  position: relative;
+  height: 100%;
+  width:300%;
+  border:0;
+  padding:0px;
+  border-radius: 40px;
+
+}
+section{
+  display: flex;
+  margin-top:10px;
+  width:23%;
+  justify-content: space-around;
+  margin-bottom: 2%;
+}
+section button{
+  position: relative;
+  padding:13px 14px;
+  background-color: lightgrey;
+  color:black;
+}
+ul{
+  display: flex;
+  width: 30%;
+  padding-left: 0px;
+  list-style: none;
+  justify-content: space-around;
+  margin: 6px;
+}
+#Bottomdiv{
+  display:flex;
+  font-size: 12px;
+  margin-top: 3%;
+}
+#Bottomdiv span{
+  width:7%;
+  margin-left: 31%;
+}
+a:hover{
+  text-decoration: underline;
+}
+button:hover{
+  border: 1px solid gray;
+  background-color: white;
+
+}
+search{
+  
+    background-repeat: no-repeat;
+    background-position: left;   
+    font-size : 29px;
+   
+  }
+footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+.footer1, .footer2 {
+    background: #f7f7f7;
+    padding: 20px 1.5em;
+    
+}
+.footer1 {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+.footer1  ul {
+    display: flex;
+    align-items: center;
+}
+.footer2  ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
