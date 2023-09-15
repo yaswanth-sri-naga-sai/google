@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Round 1 Instructions</title>
+    <link rel="stylesheet" href="sudoku.css">
+    <script>
+        function goto(){
+            document.getElementById('myForm').action = "valid3.html";
+        }
+    </script>
+
+</head>
+<body>
+    <body>
+        <div id="time"><div id="timer"></div></div>
+        <script>
+            // Set the initial time for the timer (5 minutes)
+            let time = 120; // 5 minutes in seconds
+            const timerDisplay = document.getElementById('timer');
+            function updateTimerDisplay() {
+                const minutes = Math.floor(time / 60).toString().padStart(2, '0');
+                const seconds = (time % 60).toString().padStart(2, '0');
+                timerDisplay.textContent = `${minutes}:${seconds}`;
+            }
+            setTimeout(function(){
+                window.location.href = "Round3.html";
+            },120000);
+    
+            // Function to start the timer
+            function startTimer() {
+                if (time > 0) {
+                    time--;
+                    updateTimerDisplay();
+                    setTimeout(startTimer, 1000); // Update every 1 second
+                } else {
+                    alert('Timer expired!');
+                }
+            }
+    
+            // Start the timer when the page loads
+            startTimer();
+            </script>
+            <h1>!!!!Round 3 Instructions...!!!!</h1>
+        
+            <div class="Inst">
+                <p style="font-size: large;">
+                    >>In this Round a Word Puzzle is there ..<br>
+                    >>From that Puzle You have to find out the Meaningful words using the clues...<br>
+                    >>Those answers are the Login credentials for the Round 4..<br>
+                    >>1st rule is for UserName and 2nd one is for password..<br>
+                    >>All the Best and Start Your Race<br>
+                    ......!!!!!!!!!......
+            </div>
+
+        <br>
+        
+ 
+</body>
+</html>

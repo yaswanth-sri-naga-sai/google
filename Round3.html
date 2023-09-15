@@ -1,0 +1,104 @@
+<html>
+    <head >
+        <link rel="stylesheet" href="sudoku.css">
+        <link rel="stylesheet" href="word.css">
+        <title>Round 3</title>
+        <script>
+            function valid() {
+                var uname=document.getElementById("uname").value;
+                var pwd = document.getElementById("pwd").value;
+                if (pwd === "FAITH" && uname=="MANAGER") {
+                    alert("Success!!!");
+                    document.getElementById('myForm').action = "delay4.html";
+                    document.getElementById('myForm').submit();
+                    window.location.href = "";
+                } else {
+                    alert("Invalid key. Please try again.");
+                }
+            }
+        </script>
+    </head>
+    <body>
+    <div class="sud" id="sud">
+        <div id="time"><div id="timer">08:00</div></div>
+        <script>
+            // Use setTimeout to close the window after 5 minutes (300,000 milliseconds).
+            setTimeout(function() {
+                window.close();
+            }, 480000);
+        </script>
+        <script>
+            // Set the initial time for the timer (5 minutes)
+            let time = 480; // 5 minutes in seconds
+            const timerDisplay = document.getElementById('timer');
+            
+    
+            // Function to update the timer display
+            function updateTimerDisplay() {
+                const minutes = Math.floor(time / 60).toString().padStart(2, '0');
+                const seconds = (time % 60).toString().padStart(2, '0');
+                timerDisplay.textContent = `${minutes}:${seconds}`;
+            }
+    
+            // Function to start the timer
+            function startTimer() {
+                if (time > 0) {
+                    time--;
+                    updateTimerDisplay();
+                    setTimeout(startTimer, 1000); // Update every 1 second
+                } else {
+                    alert('Timer expired!');
+                }
+            }
+    
+            // Start the timer when the page loads
+            startTimer();
+        </script>
+        <h1>Crack the User and Password from the Puzzle</h1>
+        <p class="bag" style="text-align: justify;">        
+            JGLDMGKDMSDOEOVMSCMWOQPRYTLFJOMCESFJKDJKFSKJKJADKJKD<br>
+            KOGJKLMSMIEOPJMLSMVMGKEJSKNMLESSONSJAPQFJDKSJKFFAJKF<br>
+            PEICREATIONJMXLAMFAJJFLSMCGJIWLOVEPJFLAMVLKDFJKJKDJF<br>
+            WILFEGMLEMFMEPTECHKSDHJDFJHFAJHNEWSDFJALKSJFJDFHFSHF<br>
+            FKJHDSCOMPUTERSDFJHKDJTECHNOLOGYKDJFASTHJDDKHFKDJFFK<br>
+            SDFHJADSHJSKILLEDFSJFKFHFHMANIFESTKJDFFKJHFASKHHFDLK<br>
+            KDHFHFDHMOREDJFJFHJHFDSKFMODRENNFKJAHJHJHSHKSJFHFKDJ<br>
+            JDSSFHAJEXPENSIVESDDKFHJHWORKKJSDHJEXCHANGEJDDHFJHJD<br>
+            SJDJSHDFPOWEREDDFSJDFJPOWERDJFSJHFJHCHOCOJKHKASJFISH<br>
+            AHJHAHAPPLEFDJHJHAPPYKDSHFHFHDKJKKSHAKKINGKJAHDKINDK<br>
+            JSHKAJDISHDJFHLASERJDFHJKDSSDFHSUPERIORKDFMANAGERJSD<br>
+            JSDFHJHECOSYSTEMKDFHJJJMEDICALJDFHJHYBRIDKSJDDHFFJJK<br>
+            FDSDJFATJSJDFJKHKDGOJSDHJFHAISHDFHJAHHATJDFHAJHATEJD<br>
+            DFSHINNOVATEJDFHJSHJKSCIENCEJKDSHFVISIONSDFGFHHGOALJ<br>
+            FAHMATEDJFHATEJDFLATEHSDHFAJGIVEJDHAKJHDKJFEELSDJDFH<br>
+            DSHAJEDUCATIONJAHSHJEFFECTDJFHJASHSOMEKHFJHAHJBAJDSH<br>
+            FJDFJDHAHJHKSJHJDFJHKDSHFJAHHDFBAJDBIPOLARSNJFAKESDS<br>
+            ELJDFHJAHJDHFJCONNECTIONSKJDFHJDSHFSHFKJHFJFNJSADSHK<br>
+            HSDHFDHGHFDGROWTHDKDSFJJSJHAJFUNSDFDHJAHFOUNDJDHFAJK<br>
+            SFHDSAJHDFKJFCKJSBFHJDFDFDFGEFDSJJLASJDHFKDSFHHFHJDH<br>
+            DFHDSHFJHDSFAHDROBOTICJDFSJHDSHFASGFHDGFHDGHFSJFHSAJ<br>
+            FHJHFHDHFKAHDFJJDFAHDSTRENGTHKSJFHAJDONEDSJFAJFJAKKA<br>
+            JDFHAHFKDSFJHKJHIDEKJDFSHAJHDJUSTSDJFAHDJFAITHSJFAJH<br>
+            SDHFAKJHHDJFOLDKFHAJFDSJFYOUSKJAFHDJHFMIGHTJSAHDSGHF<br>
+            HFJSAHFJHSASSUMEDSAKJFHJJSJAKJOKEDJAKJODESALFKJELSDK<br>
+            AHJSHDFHSGFHSDGFYUDGFUEGQWYEGQWUGUEWGHDSHASDJHWUDEWU<br>
+            JFHAJFHJDFHADHFJHSDFJHDHFJDFEUYGRFHEBFHDSBADFBJBFAHB<br>
+            SJFHFHAHSFINISHLKASDKJFHJDGROWKJSDHSJFHJFBLUEKJDFAKJ <br>      </p></div>
+
+        <div id="round1" style="text-align: justify;">
+            <p>Note : The Username and Password characters all are uppercase letters  </p>
+            <h1><b>CLUES :</b></h1>
+            <p style="text-align: justify;">->>Client whose name is related to sorting the things and report to head.(Username)</p>
+            <p style="text-align: justify;">->>Synonyms of Belief (password)</p>
+                <center>
+                <form onsubmit="valid()" id="myForm" method="get" >
+                    Username : <input type="text" id="uname" placeholder="Enter username"><br>
+                    PassWord : <input type="password" id="pwd" placeholder="Enter password"><br><br>
+                    <input type="submit">
+                </form> 
+
+                </center></body>
+            </div>
+    </body>
+    
+</html>

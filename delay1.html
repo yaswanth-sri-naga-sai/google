@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Round 1 Instructions</title>
+    <link rel="stylesheet" href="sudoku.css">
+    
+
+</head>
+<body>
+    <body>
+        <div id="time"><div id="timer"></div></div>
+        <script>
+            // Set the initial time for the timer (5 minutes)
+            let time = 120; // 5 minutes in seconds
+            const timerDisplay = document.getElementById('timer');
+            function updateTimerDisplay() {
+                const minutes = Math.floor(time / 60).toString().padStart(2, '0');
+                const seconds = (time % 60).toString().padStart(2, '0');
+                timerDisplay.textContent = `${minutes}:${seconds}`;
+            }
+            setTimeout(function(){
+                window.location.href = "Round1.html";
+            },120000);
+    
+            // Function to start the timer
+            function startTimer() {
+                if (time > 0) {
+                    time--;
+                    updateTimerDisplay();
+                    setTimeout(startTimer, 1000); // Update every 1 second
+                } else {
+                    alert('Timer expired!');
+                }
+            }
+    
+            // Start the timer when the page loads
+            startTimer();
+            </script>
+            <h1>!!!!Round 1 Instructions...!!!!</h1>
+        
+            <div class="Inst">
+                <p style="font-size: large;">
+                ->Select the number below and press the particular cell.<br>
+                ->You must use the given numbers as starting points. These are the numbers pre-filled in the grid. You cannot change or remove them. <br>
+                ->Always double-check your filled-in numbers to ensure that you haven't made any mistakes or violations of the rules.<br>
+                ->If you have done any mistakes the error count increases, so think twice when you select your answer.
+                </p>
+            </div>
+
+        <br>
+        
+ 
+</body>
+</html>

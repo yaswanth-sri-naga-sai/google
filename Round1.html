@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width initial-scale=1.0 user-scalable=no">
+        <title>Sudoku</title>
+
+        <link rel="stylesheet" href="sudoku.css">
+        <script src="sudoku.js"></script>
+        <script>
+            function valid() {
+                var uname=document.getElementById("uname").value;
+                var pwd = document.getElementById("pwd").value;
+                if (pwd === "8293" && uname=="Sudoku") {
+                    alert("Success!!!");
+                    document.getElementById('myForm').action = "delay2.html";
+                    document.getElementById('myForm').submit();
+                    window.location.href = "";
+                } else {
+                    alert("Invalid key. Please try again.");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div id="time"><div id="timer">08:00</div></div>
+        <script>
+            // Use setTimeout to close the window after 5 minutes (300,000 milliseconds).
+            setTimeout(function() {
+                window.close();
+            }, 480000);
+        </script>
+        <script>
+            // Set the initial time for the timer (5 minutes)
+            let time = 480; // 5 minutes in seconds
+            const timerDisplay = document.getElementById('timer');
+    
+            // Function to update the timer display
+            function updateTimerDisplay() {
+                const minutes = Math.floor(time / 60).toString().padStart(2, '0');
+                const seconds = (time % 60).toString().padStart(2, '0');
+                timerDisplay.textContent = `${minutes}:${seconds}`;
+            }
+    
+            // Function to start the timer
+            function startTimer() {
+                if (time > 0) {
+                    time--;
+                    updateTimerDisplay();
+                    setTimeout(startTimer, 1000); // Update every 1 second
+                } else {
+                    setTimeout(
+                        function(){
+                            window.close();
+                        },10000
+                    );
+
+                }
+            }
+    
+            // Start the timer when the page loads
+            startTimer();
+        </script>
+        
+        <div class="sud">
+            <h1>Sudoku</h1><hr>
+            <h2 id="errors">0</h2>
+            <!-- 9x9 board -->
+            <div id="board" class="sud1"></div><br>
+            <div id="digits" class="sud2"></div>
+            <div id="round1">
+                <h1>User : Sudoku</h1>
+                <center>
+                <form onsubmit="valid()" id="myForm" method="get" >
+                    Username : <input type="text" id="uname" placeholder="Enter username"><br>
+                    PassWord : <input type="password" id="pwd" placeholder="Enter password"><br><br>
+                    <input type="submit">
+                </form> 
+                </center>
+            </div>
+        </div>
+    </body>
+</html>

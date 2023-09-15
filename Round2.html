@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="sudoku.css">
+    <script>
+        function valid(){
+            var uname=document.getElementById("uname").value;
+            var pwd=document.getElementById("pwd").value;
+            if (pwd == "Marthon" && uname=="Blast") {
+                    alert("Success!!!");
+                    document.getElementById('myForm').action = "delay3.html";
+                    document.getElementById('myForm').submit();
+                    
+            }else {
+                    alert("Invalid key. Please try again.");
+                }
+            }
+    </script>
+    <title>Round2</title>
+    <link rel="stylesheet" href="valid.css">
+</head>
+<body>
+    <div id="time"><div id="timer">08:00</div></div>
+        <script>
+        // Use setTimeout to close the window after 5 minutes (300,000 milliseconds).
+        setTimeout(function() {
+            window.close();
+        }, 120000);
+        </script>
+        <script>
+            // Set the initial time for the timer (5 minutes)
+            let time = 120; // 5 minutes in seconds
+            const timerDisplay = document.getElementById('timer');
+            
+            
+            
+    
+            // Function to update the timer display
+            function updateTimerDisplay() {
+                const minutes = Math.floor(time / 60).toString().padStart(2, '0');
+                const seconds = (time % 60).toString().padStart(2, '0');
+                timerDisplay.textContent = `${minutes}:${seconds}`;
+            }
+    
+            // Function to start the timer
+            function startTimer() {
+                if (time > 0) {
+                    time--;
+                    updateTimerDisplay();
+                    setTimeout(startTimer, 1000); // Update every 1 second
+                } else {
+                    alert('Timer expired!');
+                }
+            }
+    
+            // Start the timer when the page loads
+            startTimer();
+        </script>
+        <center>
+        <h1>Welcome to Round 2</h1>
+        <br>
+        <br>
+        <div class="sud">
+            <p> !!!!...Use the Following Tool to Decrypt the files...!!!!<br>
+            <a href="https://www.dcode.fr/whitespace-language" target="_blank" download> <br><input type="button" value="Decode Here" ></a>
+        </div>
+        <div id="round1">
+            <center>
+            <form onsubmit="valid()" id="myForm" method="get" >
+                Username : <input type="text" id="uname" placeholder="Enter username"><br>
+                PassWord : <input type="password" id="pwd" placeholder="Enter password"><br><br>
+                <input type="submit">
+            </form> 
+            </center></body>
+        </div>
+        </form>        
+        </center>
+</body>
